@@ -50,3 +50,6 @@ Thumbs.db
 
 # Generated file (E2E testing trigger)
 test.js
+
+# Node.js files
+package-lock.json

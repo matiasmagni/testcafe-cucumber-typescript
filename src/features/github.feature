@@ -1,11 +1,11 @@
 @github
-Feature: Searching for TestCafe on GitHub
+Feature: GitHub search
 
   I want to find TestCafe repository on GitHub
 
-  Scenario: Searching for TestCafe on GitHub
-    Given I open the GitHub page
-    When I am typing my search request "TestCafe" on GitHub
-    Then I am pressing enter key on GitHub
-    # FAILS on PURPOSE -> so you can see the screenshot in the report
-    Then I should see that the first GitHub's result is DevExpress/testcafe
+  Scenario: User searches for "TestCafe" on GitHub
+    Given GitHub page is opened
+    When "TestCafe" is typed on Search GitHub's input on GitHub page
+    And "Enter" key is pressed on Search GitHub's input on GitHub page
+    # FAILS on PURPOSE -> so screenshot can be seen in the report
+    Then the first GitHub's result is "DevExpress/testcafe" on GitHub's results page

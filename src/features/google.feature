@@ -1,10 +1,10 @@
 @google
 Feature: Google search
 
-  I want to find TestCafe repository by Google search
+  User wants to find a repository on Google search results
 
   Scenario: User searches for "TestCafe" on Google
     Given Google's search page is opened
-    When "github TestCafe" is typed on Google's search input
-    And "enter" key is pressed on Google's search input
-    Then the first result is "DevExpress/testcafe: A Node.js tool to automate end" on Google's results page
+    When the user types "github TestCafe" on Google's search input
+    And the user press the "enter" key on Google's search input
+    Then the link "DevExpress/testcafe: A Node.js tool to automate end" is the first result shown on Google's results page

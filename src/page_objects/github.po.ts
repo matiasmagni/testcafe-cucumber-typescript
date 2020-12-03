@@ -1,27 +1,24 @@
 import { $ } from '../utils';
 
 export class GithubPage {
-  url() {
-    return 'https://github.com/';
+  private url = 'https://github.com/';
+  private repoListItem: Selector = $('.repo-list-item');
+  private loginErrorMessage: Selector = $('#js-flash-container > div > div');
+  private searchInput: Selector = $('.header-search-input');
+
+  getUrl() {
+    return this.url;
   }
 
-  searchBox() {
-    return $('.header-search-input');
+  getSearchInput(): Selector {
+    return this.searchInput;
   }
 
-  firstSearchResult() {
-    return $('.repo-list-item').nth(0);
+  getFirstSearchResult(): Promise<string> {
+    return this.repoListItem.nth(0).innerText;
   }
 
-  loginButton() {
-    return $('.btn.btn-primary.btn-block');
-  }
-
-  loginErrorMessage() {
-    return $('#js-flash-container > div > div');
-  }
-
-  searchButton() {
-    return $('.header-search-input');
+  getLoginErrorMessage() {
+    return this.loginErrorMessage.innerText;
   }
 }

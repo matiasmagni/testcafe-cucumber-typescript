@@ -31,7 +31,8 @@
     "######## LINTING & FORMATING (WIN) ########": "",
     "lint:win": "tslint.cmd -p . --format codeFrame --fix",
     "format:win": "prettier.cmd 'src/**/*.{ts,json,scss,html}' --write",
-    "style:win": "npm run format:win && npm run lint:win"
+    "style:win": "npm run format:win && npm run lint:win",
+    "debug": "node --inspect=1337 --debug-brk --nolazy node_modules/cucumber/bin/cucumber-js --tags @debug --format json:./reports/report.json"
   },
   "private": true,
   "husky": {
